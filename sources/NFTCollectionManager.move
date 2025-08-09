@@ -3,7 +3,7 @@ module pavani_addr::NFTCollectionManager {
     use std::string::{Self, String};
     use std::vector;
 
-    /// Struct representing an NFT collection with series and editions
+
     struct Collection has store, key {
         name: String,
         total_series: u64,
@@ -11,7 +11,7 @@ module pavani_addr::NFTCollectionManager {
         series_list: vector<Series>,
     }
 
-    /// Struct representing a series within a collection
+    
     struct Series has store, drop, copy {
         id: u64,
         name: String,
@@ -19,7 +19,7 @@ module pavani_addr::NFTCollectionManager {
         max_editions: u64,
     }
 
-    /// Function to create a new NFT collection
+   
     public fun create_collection(
         creator: &signer, 
         collection_name: vector<u8>
@@ -34,7 +34,6 @@ module pavani_addr::NFTCollectionManager {
         move_to(creator, collection);
     }
 
-    /// Function to add a new series to an existing collection
     public fun add_series(
         owner: &signer,
         series_name: vector<u8>,
