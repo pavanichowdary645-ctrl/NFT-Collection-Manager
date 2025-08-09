@@ -1,0 +1,15 @@
+[package]
+name = "NFTCollectionManager"
+version = "1.0.0"
+authors = []
+
+[addresses]
+pavani_addr="f07dd7f95388c1cb21e845d8166ec0b085808c4e1eb5f13d5bc4d1557acb3203"
+[dev-addresses]
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-framework.git"
+rev = "mainnet"
+subdir = "aptos-framework"
+
+[dev-dependencies]
